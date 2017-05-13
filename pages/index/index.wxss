@@ -1,0 +1,43 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+.input{
+ padding-left: 20px;
+ height: 40px;
+ margin-top: 0px;
+ padding-right:90px;
+}
+
+.loginButton{
+  margin-left: 15rpx;
+  margin-right: 15rpx; 
+  margin-top: 50rpx; 
+  border-radius: 40rpx;
+  padding-left:100px;
+  padding-right:100px;
+
+}
+
+.inputView{
+ border: 2px solid black;
+ border-radius: 50px;
+ margin-left: 15px;
+ margin-right: 15px;
+ margin-top: 15px;
+}
