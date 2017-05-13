@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: { 
-  studentId: {},
+  username: {},
   password: {},
     motto: 'Hello World',
     userInfo: {} //空对象
@@ -14,7 +14,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  getStudentId: function(e){
+  getUsername: function(e){
     this.setData({
       studentId: e.detail.value
     });
@@ -29,7 +29,7 @@ Page({
     wx.request({
       url: 'http://10.148.26.196:9000', //仅为示例，并非真实的接口地址
       data: {
-        username: this.data.studentId,
+        username: this.data.username,
         password: this.data.password
       },
       header: {
