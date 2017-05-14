@@ -1,0 +1,9 @@
+<view class="container">
+  <block wx:for="{{notice}}">
+    <view>
+    <navigator url="{{item.url}}">
+      {{item.title}}
+    </navigator>{{item.noticetime}}
+   </view>
+  </block>
+</view>
