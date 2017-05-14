@@ -5,6 +5,7 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <block>
+
     <view class="inputView" style="margin-top: 20%">
       <input class="input" type="number" placeholder="请输入你的学号" bindinput="getUsename" placeholder-style="color: #AAA"></input>
     </view>
@@ -12,7 +13,6 @@
       <input class="input" type="password" placeholder="请输入你的密码" bindinput="getPassword" placeholder-style="color: #AAA"></input>
 
     </view>
-    <button class="loginButton"  type="primary" bindtap="doLogin">登录</button>
-
+    <button class="loginButton"  type="primary" bindtap="doLogin">登录</button>   
   </block>
 </view>
