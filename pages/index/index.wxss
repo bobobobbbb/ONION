@@ -31,7 +31,6 @@
   border-radius: 40rpx;
   padding-left:100px;
   padding-right:100px;
-
 }
 
 .inputView{
