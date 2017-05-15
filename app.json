@@ -10,18 +10,26 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "华中师范大学师学分查询小程序",
-
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "3cc51f",
+
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "学分成绩"
+        
+
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/notice/notice",
+        "text": "通知公告"
+      },
+      {
+        "pagePath":"",
+        "text":"更多"
       }
     ]
 

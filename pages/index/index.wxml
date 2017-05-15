@@ -13,6 +13,6 @@
       <input class="input" type="password" placeholder="请输入你的密码" bindinput="getPassword" placeholder-style="color: #AAA"></input>
 
     </view>
-    <button class="loginButton"  type="primary" bindtap="doLogin">登录</button>   
+    <button class="loginButton" plain type="primary" bindtap="doLogin">登录</button>   
   </block>
 </view>
