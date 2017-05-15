@@ -1,38 +1,25 @@
-//index.js
-//获取应用实例
-var app = getApp()
-Page({
-  data: { 
-    gradeInfo: {} //空对象
-  },
-  doLogin: function() {
-    wx.request({
-      url: 'http://10.148.37.48:9000/user/doLogin', //仅为示例，并非真实的接口地址
-      data: {
-        username: this.data.username,
-        password: this.data.password
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-       if(res.data.state==1){
-         wx.navigateTo({
-           url: '../logs/logs'
-         })
-       }
-      }
-    })
-  },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo: userInfo
-      })
-    })
-  }
-})
+<view class="container">
+<view class="section">
+  <view class="section__title">学年</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">学期</view>
+  <picker bindchange="bindSectionChange" value="{{index}}" range="{{section}}">
+    <view class="picker">
+      当前选择：{{section[idx]}}
+    </view>
+  </picker>
+</view>
+<button bindtap="click">查询</button>
+ <block wx:for="{{gradeInfo}}">
+    <view>
+     {{item.kcmc}} {{item.cj}} {{item.xm}} 
+   </view>
+  </block>
+</view>
+
