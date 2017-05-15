@@ -14,7 +14,7 @@ Page({
   getNotice: function () {
     var that = this
     wx.request({
-      url: 'http://10.148.37.48:9000/notice/getNoticeTop15Tzggxs', //仅为示例，并非真实的接口地址
+      url: 'http://localhost:9000/notice/getNoticeTop15Tzggxs', //仅为示例，并非真实的接口地址
       data: {   
       },
       header: {

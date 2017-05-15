@@ -26,7 +26,7 @@ Page({
   },
   doLogin: function() {
     wx.request({
-      url: 'http://10.148.37.48:9000/user/doLogin', //仅为示例，并非真实的接口地址
+      url: 'http://localhost:9000/user/doLogin', //仅为示例，并非真实的接口地址
       data: {
         username: this.data.username,
         password: this.data.password
@@ -35,9 +35,15 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
+        console.log(res.data)
        if(res.data.state==1){
+         //将token放入缓存中
+         try {
+           wx.setStorageSync('token', res.data.token)
+         } catch (e) {
+         }
          wx.navigateTo({
-           url: '../notice/notice'
+           url: '../grade/grade'
          })
        }
       }
