@@ -1,2 +1,10 @@
 <!--gradeInfo.wxml-->
-<text>gradeInfo.wxml</text>
+
+<view>课程名称: {{kcmc}}</view>
+<view>课程类别: {{kclbmc}}</view>
+<view>教师: {{jsxm}}</view>
+<view>考试性质: {{ksxz}}</view>
+<view>学分: {{xf}}</view>
+<view>学号: {{xh}}</view>
+<view>姓名: {{xm}}</view>
+<view>专业: {{zymc}}</view>

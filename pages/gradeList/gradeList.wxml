@@ -1,0 +1,17 @@
+<!-- gradeList.wxml -->
+<view class="body">
+     <scroll-view scroll-y="true" height="100%">
+        <block wx:for="{{gradeInfo}}">
+          <navigator url="../gradeInfo/gradeInfo?cj={{item.cj}}&jgmc={{item.jgmc}}&jsxm={{item.jsxm}}&kcxzmc={{item.kcxzmc}}&kclbmc={{item.kclbmc}}&kcmc={{item.kcmc}}&ksxz={{item.ksxz}}&xf={{item.xf}}&xh={{item.xh}}&xm={{item.xm}}&zymc={{item.zymc}}">
+          <view class="board">
+            <!-- view class="board" bindtap='getIndex' index='{{index}}' -->
+                <view class="board-info">
+                  <text class="board-name"> {{item.kcmc}} 分数:{{item.cj}} </text>
+                  <image class="board-img" src="/images/arrowright.png" mode="aspectFill"/>
+                </view>
+            </view>
+          </navigator>
+        </block>
+    </scroll-view>
+</view>
+<view class="deadline">-------- 没啦！嫌课少多报一点呀----------</view>

@@ -5,14 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    item: {}
+    singleData: {},
+    jgmc: '',
+    jsxm: '',
+    kcxzmc: '',
+    kclbmc: '',
+    kcmc: '',
+    ksxz: '',
+    xf: '',
+    xh: '',
+    xm: '',
+    zymc: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad (params) {
-    
+  onLoad: function (params) {
+    console.log(params.kcmc)
+    this.setData({
+      jgmc: params.jgmc,
+      jsxm: params.jsxm,
+      kcxzmc: params.kcxzmc,
+      kclbmc: params.kclbmc,
+      kcmc: params.kcmc,
+      xf: params.xf,
+      xh: params.xh,
+      xm: params.xm,
+      zymc: params.zymc
+    })
   },
 
   /**
@@ -20,7 +41,7 @@ Page({
    */
   onReady: function () {
     wx.setNavigationBarTitle({
-      title: '' //更换title名字
+      title: '成绩详细信息' //更换title名字
     })
   },
 

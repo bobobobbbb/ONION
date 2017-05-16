@@ -5,7 +5,8 @@
     "pages/grade/grade",
     "pages/notice/notice",
     "pages/gradeInfo/gradeInfo",
-    "pages/noticeInfo/noticeInfo"
+    "pages/noticeInfo/noticeInfo",
+    "pages/gradeList/gradeList"
   ],
   "window": {
     "backgroundTextStyle": "light",

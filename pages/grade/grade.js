@@ -85,24 +85,8 @@ Page({
     var that = this 
     this.getXnm()
     this.getXqm()
-    wx.request({
-      url: API.GETGRADE, 
-      data: {
-        xnm: that.data.xnm,
-        xqm: that.data.xqm,
-        token: this.data.token
-      },      
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data)
-        that.setData({
-          gradeInfo: res.data.data.courseInfos
-        })
-      },
-      //获取数据失败提示
-      fail: function(){}
+    wx.navigateTo({
+      url: '../gradeList/gradeList?xnm=' + this.data.xnm + '&xqm=' + this.data.xqm
     })
   }
 })
