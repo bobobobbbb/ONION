@@ -3,35 +3,32 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/grade/grade",
-    "pages/notice/notice"
-
+    "pages/notice/notice",
+    "pages/gradeInfo/gradeInfo",
+    "pages/noticeInfo/noticeInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "华中师范大学师学分查询小程序",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#dddddd",
     "selectedColor": "3cc51f",
-
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "学分成绩"
-        
-
       },
       {
         "pagePath": "pages/notice/notice",
         "text": "通知公告"
       },
       {
-        "pagePath":"",
-        "text":"更多"
+        "pagePath": "",
+        "text": "更多"
       }
     ]
-
   }
 }

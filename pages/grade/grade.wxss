@@ -1,6 +1,48 @@
 .container{
-  display: flex
+  display: block;
 }
-.section{
-  padding-top:0rpx
+.selector {
+  padding: 40rpx 80rpx 20rpx
+}
+.title {
+  display: block;
+  font-size: 50rpx;
+}
+.xq-title {
+  display: flex;
+  margin-right: 20rpx;
+  font-size: 10rpx
+}
+
+.queryButton {
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  padding-left: 100rpx;
+  padding-right: 100rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.board {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #FBF9FE;
+  overflow: hidden;
+  border-radius: 4rpx;
+  cursor: pointer;
+}
+
+.board-info {
+  display: flex;
+  padding: 40rpx;
+  align-items: center;
+  flex-direction: row;
+}
+
+.board-name {
+  flex: 1
+}
+.board-img {
+  width: 32rpx;
+  height: 32rpx;
 }

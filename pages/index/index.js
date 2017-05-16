@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import {API} from '../../utils/api.js'
 var app = getApp()
 Page({
   data: { 
@@ -25,8 +26,14 @@ Page({
     })
   },
   doLogin: function() {
+    var that = this
+    if ( wx.getStorageSync('token') != '') { //测试用
+      wx.navigateTo({
+        url: '../grade/grade'
+      })
+    }
     wx.request({
-      url: 'http://localhost:9000/user/doLogin', //仅为示例，并非真实的接口地址
+      url: API.LOGIN, //仅为示例，并非真实的接口地址
       data: {
         username: this.data.username,
         password: this.data.password
@@ -37,9 +44,10 @@ Page({
       success: function (res) {
         console.log(res.data)
        if(res.data.state==1){
-         //将token放入缓存中
+         //将token放入缓存中和学号
          try {
            wx.setStorageSync('token', res.data.token)
+           wx.setStorageSync('username', that.data.username)
          } catch (e) {
          }
          wx.navigateTo({

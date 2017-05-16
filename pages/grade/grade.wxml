@@ -1,25 +1,32 @@
 <view class="container">
-<view class="section">
-  <view class="section__title">学年</view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      当前选择：{{array[index]}}
-    </view>
-  </picker>
-</view>
-<view class="section">
-  <view class="section__title">学期</view>
-  <picker bindchange="bindSectionChange" value="{{index}}" range="{{section}}">
+  <view class="selector">
+    <text class="title">学年</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前选择：{{array[index]}}
+        </view>
+      </picker>
+    <text class="title">学期</text>
+    <picker bindchange="bindSectionChange" value="{{index}}" range="{{section}}">
     <view class="picker">
       当前选择：{{section[idx]}}
     </view>
-  </picker>
-</view>
-<button bindtap="click">查询</button>
- <block wx:for="{{gradeInfo}}">
-    <view>
-     {{item.kcmc}} {{item.cj}} {{item.xm}} 
-   </view>
-  </block>
+    </picker>
 </view>
 
+  <button bindtap="clickQuery" class="queryButton">查询</button>
+<view class="body">
+     <scroll-view scroll-y="true" height="100%">
+        <block wx:for="{{gradeInfo}}">
+          <navigator url="../gradeInfo/gradeInfo?item={{item}}">
+            <view class="board">
+                <view class="board-info">
+                  <text class="board-name"> {{item.kcmc}} 分数:{{item.cj}} </text>
+                  <image class="board-img" src="/images/arrowright.png" mode="aspectFill"/>
+                </view>
+            </view>
+          </navigator>
+        </block>
+    </scroll-view>
+</view>
+</view>
